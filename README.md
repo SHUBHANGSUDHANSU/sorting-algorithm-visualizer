@@ -20,13 +20,15 @@ A React.js application that visualizes and analyzes common sorting algorithms in
   - Pause/Resume sorting
   - Reset visualization
 - Responsive design that works on desktop and mobile devices
+- Dark mode support
+- Smooth animations using Framer Motion
 
 ## Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/sorting-analyzer.git
-cd sorting-analyzer
+git clone https://github.com/yourusername/sorting-algorithm-visualizer.git
+cd sorting-algorithm-visualizer
 ```
 
 2. Install dependencies:
@@ -49,6 +51,7 @@ npm run dev
 4. Use the speed slider to adjust the animation speed
 5. Click "Pause" to pause the visualization at any time
 6. Click "Reset" to stop and reset the visualization
+7. Toggle dark mode using the theme button in the top-right corner
 
 ## Project Structure
 
@@ -77,6 +80,7 @@ src/
 
 - React.js
 - Vite
+- Framer Motion
 - CSS3 with CSS Variables
 - Modern JavaScript (ES6+)
 
