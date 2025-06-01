@@ -2,6 +2,10 @@
 
 A React.js application that visualizes and analyzes common sorting algorithms in real-time. Watch as different sorting algorithms work their magic on randomly generated arrays, with detailed metrics and beautiful animations.
 
+## Live Demo
+
+Visit the live demo: [Sorting Algorithm Visualizer](https://shubhangsudhansu.github.io/sorting-algorithm-visualizer/)
+
 ## Features
 
 - Visualize 5 different sorting algorithms:
@@ -27,7 +31,7 @@ A React.js application that visualizes and analyzes common sorting algorithms in
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/sorting-algorithm-visualizer.git
+git clone https://github.com/SHUBHANGSUDHANSU sorting-algorithm-visualizer.git
 cd sorting-algorithm-visualizer
 ```
 
