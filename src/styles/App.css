@@ -1,0 +1,143 @@
+:root {
+  /* Light theme colors */
+  --bar-default: #8e44ad;    /* Vibrant purple */
+  --bar-comparing: #f1c40f;  /* Warm yellow for comparison */
+  --bar-swapping: #e74c3c;   /* Alert red for swaps */
+  --bar-sorted: #2ecc71;     /* Success green for sorted state */
+  
+  /* UI colors */
+  --background: #f8f9fa;     /* Light gray background */
+  --text: #2c3e50;          /* Dark blue-gray text */
+  --button-bg: #8e44ad;     /* Vibrant purple */
+  --button-hover: #9b59b6;  /* Lighter purple for hover */
+  --button-disabled: #bdc3c7; /* Light gray for disabled */
+  
+  /* Additional UI elements */
+  --panel-bg: #ffffff;      /* White for panels */
+  --border-color: #e9ecef;  /* Light gray for borders */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+[data-theme="dark"] {
+  /* Dark theme colors */
+  --bar-default: #8e44ad;    /* Vibrant purple */
+  --bar-comparing: #f1c40f;  /* Keep yellow for consistency */
+  --bar-swapping: #e74c3c;   /* Keep red for consistency */
+  --bar-sorted: #2ecc71;     /* Keep green for consistency */
+  
+  --background: #1a1a1a;     /* Dark background */
+  --text: #ecf0f1;          /* Light text */
+  --button-bg: #8e44ad;     /* Vibrant purple */
+  --button-hover: #9b59b6;  /* Lighter purple for hover */
+  --button-disabled: #34495e; /* Dark gray for disabled */
+  
+  --panel-bg: #2c2c2c;      /* Dark panel background */
+  --border-color: #404040;  /* Dark border */
+  --shadow-color: rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  flex: 1;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--text);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.visualization-container {
+  display: flex;
+  gap: 2rem;
+  min-height: 500px;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--panel-bg);
+  border-top: 1px solid var(--border-color);
+  color: var(--text);
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+.footer a {
+  color: var(--button-bg);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: var(--button-hover);
+}
+
+@media (max-width: 768px) {
+  .controls-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .visualization-container {
+    flex-direction: column;
+  }
+} 
